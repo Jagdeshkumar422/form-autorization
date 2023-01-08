@@ -38,9 +38,6 @@ const Login = () => {
 };
 
 
-let forgetPassword =()=>{
-  
-}
 
 let loginWithGoogle = ()=>{
   var provider = new firebase.auth.GoogleAuthProvider();
@@ -51,15 +48,6 @@ let loginWithGoogle = ()=>{
   })
 }
 
-
-// let loginWithFacebook= ()=>{
-//   var provider = new firebase.auth.FacebookAuthProvider();
-//   firebase.auth().signInWithPopup(provider).then((res)=>{
-//     console.log(res)
-//   }).catch((err)=>{
-//     console.log(err)
-//   })
-// }
 
 
 
