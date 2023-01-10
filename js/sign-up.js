@@ -1,3 +1,6 @@
+const fName =document.getElementById("fName")
+const lName =document.getElementById("lName")
+const mobileNumber =document.getElementById("mobileNumber")
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const message = document.getElementById("message");
@@ -10,6 +13,9 @@ const SignUp = () => {
     message.style.color = "red";
   } else {
     const userData = {
+      First_Name: fName.value,
+      Last_Name: lName.value,
+      mobile_Number: mobileNumber.value,
       email: email.value,
       password: password.value,
     };
@@ -21,9 +27,11 @@ const SignUp = () => {
         res.user.sendEmailVerification();
         message.innerHTML = "Sign Up";
         message.style.color = "green";
-        setTimeout(() => {
-          window.location.assign("./email-verification.html");
-        }, 2000);
+        firebase.database().ref("user/" + res.user.uid).set(userData).then(()=>{
+          setTimeout(() => {
+            window.location.assign("./email-verification.html");
+          }, 2000);
+        })
       })
       .catch((error) => {
         message.innerHTML = error.message;

@@ -1,6 +1,7 @@
 const firebaseConfig = {
   apiKey: "AIzaSyAGjOaF9aH4USet1EF5Uxr3ykabXNUCXN4",
   authDomain: "email-verfication-bb8e7.firebaseapp.com",
+  databaseURL: "https://email-verfication-bb8e7-default-rtdb.firebaseio.com",
   projectId: "email-verfication-bb8e7",
   storageBucket: "email-verfication-bb8e7.appspot.com",
   messagingSenderId: "675124660674",
